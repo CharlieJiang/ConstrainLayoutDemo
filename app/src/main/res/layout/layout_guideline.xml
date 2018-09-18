@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 垂直居中的参考线 -->
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_01"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/guideline_btn_01"
+        android:text="垂直中心线左侧按钮"
+        app:layout_constraintRight_toLeftOf="@id/guideline_01"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/guideline_btn_02"
+        android:text="垂直中心线右侧按钮"
+        app:layout_constraintLeft_toRightOf="@id/guideline_01"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- 水平居中的参考线 -->
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_02"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/guideline_btn_03"
+        android:text="中心点左上按钮"
+        app:layout_constraintRight_toLeftOf="@id/guideline_01"
+        app:layout_constraintBottom_toTopOf="@id/guideline_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/guideline_btn_04"
+        android:text="中心点右上按钮"
+        app:layout_constraintLeft_toRightOf="@id/guideline_01"
+        app:layout_constraintBottom_toTopOf="@id/guideline_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/guideline_btn_05"
+        android:text="中心点左下按钮"
+        app:layout_constraintRight_toLeftOf="@id/guideline_01"
+        app:layout_constraintTop_toBottomOf="@id/guideline_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/guideline_btn_06"
+        android:text="中心点右下按钮"
+        app:layout_constraintLeft_toRightOf="@id/guideline_01"
+        app:layout_constraintTop_toBottomOf="@id/guideline_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- 左边等间距的参考线 -->
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_03"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- 顶部等间距的参考线 -->
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_04"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/guideline_btn_07"
+        android:text="左侧等间距按钮"
+        app:layout_constraintLeft_toRightOf="@id/guideline_03"
+        app:layout_constraintTop_toBottomOf="@id/guideline_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/guideline_tv_01"
+        android:text="左侧等间距文本"
+        app:layout_constraintLeft_toRightOf="@id/guideline_03"
+        app:layout_constraintTop_toBottomOf="@id/guideline_btn_07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/guideline_et_01"
+        android:text="左侧等间距输入框"
+        app:layout_constraintLeft_toRightOf="@id/guideline_03"
+        app:layout_constraintTop_toBottomOf="@id/guideline_tv_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- 右边等间距的参考线 -->
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_05"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/guideline_btn_08"
+        android:text="右侧等间距按钮"
+        app:layout_constraintRight_toLeftOf="@id/guideline_05"
+        app:layout_constraintTop_toBottomOf="@id/guideline_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/guideline_tv_02"
+        android:text="右侧等间距文本"
+        app:layout_constraintRight_toLeftOf="@id/guideline_05"
+        app:layout_constraintTop_toBottomOf="@id/guideline_btn_08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/guideline_et_02"
+        android:text="右侧等间距输入框"
+        app:layout_constraintRight_toLeftOf="@id/guideline_05"
+        app:layout_constraintTop_toBottomOf="@id/guideline_tv_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>

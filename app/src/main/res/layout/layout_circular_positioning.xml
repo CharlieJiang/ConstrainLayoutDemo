@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:id="@+id/circularPos_btn_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        android:text="基准按钮"
+        />
+
+    <TextView
+        android:id="@+id/circularPos_tv_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintCircle="@id/circularPos_btn_01"
+        app:layout_constraintCircleAngle="0"
+        app:layout_constraintCircleRadius="100dp"
+        android:text="上方（角度：0）"
+        />
+
+    <TextView
+        android:id="@+id/circularPos_tv_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintCircle="@id/circularPos_btn_01"
+        app:layout_constraintCircleAngle="90"
+        app:layout_constraintCircleRadius="100dp"
+        android:text="右边（角度：90）"
+        />
+
+    <TextView
+        android:id="@+id/circularPos_tv_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintCircle="@id/circularPos_btn_01"
+        app:layout_constraintCircleAngle="180"
+        app:layout_constraintCircleRadius="100dp"
+        android:text="下方（角度：180）"
+        />
+
+    <TextView
+        android:id="@+id/circularPos_tv_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintCircle="@id/circularPos_btn_01"
+        app:layout_constraintCircleAngle="270"
+        app:layout_constraintCircleRadius="100dp"
+        android:text="左边（角度：270）"
+        />
+
+    <TextView
+        android:id="@+id/circularPos_tv_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintCircle="@id/circularPos_btn_01"
+        app:layout_constraintCircleAngle="360"
+        app:layout_constraintCircleRadius="50dp"
+        android:text="上方（角度：360）"
+        />
+
+    <TextView
+        android:id="@+id/circularPos_tv_06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintCircle="@id/circularPos_btn_01"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="100dp"
+        android:text="右上方（角度：45）"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintCircle="@id/circularPos_btn_01"
+        app:layout_constraintCircleAngle="135"
+        app:layout_constraintCircleRadius="100dp"
+        android:text="右下方（角度：135）"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintCircle="@id/circularPos_btn_01"
+        app:layout_constraintCircleAngle="225"
+        app:layout_constraintCircleRadius="100dp"
+        android:text="左下方（角度：225）"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintCircle="@id/circularPos_btn_01"
+        app:layout_constraintCircleAngle="315"
+        app:layout_constraintCircleRadius="100dp"
+        android:text="左上方（角度：315）"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

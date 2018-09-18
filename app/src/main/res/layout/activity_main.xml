@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cocoas.constraintlayoutdemo.MainActivity">
+
+    <Button
+        android:id="@+id/main_btn_relativePositioning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="相对定位测试：Relative Positioning"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/main_btn_margins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="margin测试：Margins"
+        app:layout_constraintTop_toBottomOf="@id/main_btn_relativePositioning"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/main_btn_centeringPositioning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="居中定位测试：Centering Positioning"
+        app:layout_constraintTop_toBottomOf="@id/main_btn_margins"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/main_btn_circularPositioning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="圆形定位测试：Circular Positioning"
+        app:layout_constraintTop_toBottomOf="@id/main_btn_centeringPositioning"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/main_btn_dimensionsConstraints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="尺寸约束测试：Dimensions Constraints"
+        app:layout_constraintTop_toBottomOf="@id/main_btn_circularPositioning"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/main_btn_chains"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="链式布局测试：Chains"
+        app:layout_constraintTop_toBottomOf="@id/main_btn_dimensionsConstraints"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/main_btn_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GuideLine控件测试"
+        app:layout_constraintTop_toBottomOf="@id/main_btn_chains"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

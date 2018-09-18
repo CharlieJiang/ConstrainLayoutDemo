@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 测试：layout_constraintLeft_toRightOf -->
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文本1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮1:左侧居文本1右侧排列（排在文本后）"
+        app:layout_constraintLeft_toRightOf="@id/textView1"
+         />
+
+    <!-- 测试：layout_constraintLeft_toLeftOf -->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文本2"
+        app:layout_constraintTop_toBottomOf="@id/button1"
+        />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮2:左侧居文本2左侧排列（左对齐覆盖文本）"
+        app:layout_constraintLeft_toLeftOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@id/button1"
+        />
+
+    <!-- 测试：layout_constraintRight_toLeftOf -->
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文本"
+        app:layout_constraintTop_toBottomOf="@id/button2"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮:右侧居文本左侧排列（排在文本前）"
+        app:layout_constraintRight_toLeftOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@id/button2"
+        />
+
+    <!-- 测试：layout_constraintRight_toRightOf -->
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文本"
+        app:layout_constraintTop_toBottomOf="@id/button3"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮:右侧居文本右侧排列（右对齐覆盖文本）"
+        app:layout_constraintRight_toRightOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@id/button3"
+        />
+
+    <!-- 测试：layout_constraintTop_toTopOf -->
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文本"
+        app:layout_constraintTop_toBottomOf="@id/button4"
+        />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮:顶部居文本顶部排列（顶对齐覆盖文本）"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@id/button4"
+        />
+
+    <!-- 测试：layout_constraintTop_toTopOf -->
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文本"
+        app:layout_constraintTop_toBottomOf="@id/button5"
+        />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮:顶部居文本底部排列（居文本下方）"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        />
+
+    <!-- 测试：layout_constraintBottom_toTopOf -->
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="文本"
+        app:layout_constraintTop_toBottomOf="@id/button6"
+        />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮:底部居文本顶部排列（居文本上方）"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        />
+
+    <!-- 测试：layout_constraintBottom_toBottomOf -->
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="文本"
+        app:layout_constraintTop_toBottomOf="@id/button7"
+        />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮:底部居文本底部排列（底对齐覆盖文本）"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        />
+
+    <!-- 测试：layout_constraintBaseline_toBaselineOf -->
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="文本"
+        app:layout_constraintTop_toBottomOf="@id/button8"
+        />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮:与文本基线对齐（与文本垂直对齐）"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
+        />
+
+    <!-- 测试：layout_constraintStart_toEndOf -->
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文本测试"
+        app:layout_constraintTop_toBottomOf="@id/button9"
+        />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮:起始位置与文本终点位置对齐（居文本后面）"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@id/button9"
+        />
+
+    <!-- 测试：layout_constraintStart_toStartOf -->
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文本测试"
+        app:layout_constraintTop_toBottomOf="@id/button10"
+        />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮:起始位置与文本起始位置对齐（左对齐覆盖文本）"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@id/button10"
+        />
+
+    <!-- 测试：layout_constraintEnd_toStartOf -->
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文本测试"
+        app:layout_constraintTop_toBottomOf="@id/button11"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮:终点位置与文本起始位置对齐（居文本左侧）"
+        app:layout_constraintEnd_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@id/button11"
+        />
+
+    <!-- 测试：layout_constraintEnd_toStartOf -->
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文本测试"
+        app:layout_constraintTop_toBottomOf="@id/button12"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮:终点位置与文本终点位置对齐（右对齐覆盖文本）"
+        app:layout_constraintEnd_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@id/button12"
+        />
+
+</android.support.constraint.ConstraintLayout>

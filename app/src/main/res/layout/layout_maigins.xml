@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 测试：layout_goneMarginLeft + layout_constraintLeft_toRightOf -->
+
+    <TextView
+        android:id="@+id/tv_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文本测试"
+        android:background="@android:color/holo_green_dark"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+         />
+
+    <Button
+        android:id="@+id/btn_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        app:layout_goneMarginLeft="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_01"
+        app:layout_constraintTop_toBottomOf="parent"
+        android:text="按钮:左边距（左边view可见为None时有效）" />
+
+    <!-- 测试：layout_goneMarginRight + layout_constraintRight_toLeftOf -->
+
+    <TextView
+        android:id="@+id/tv_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文本测试"
+        android:background="@android:color/holo_green_dark"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_01"
+        />
+
+    <Button
+        android:id="@+id/btn_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        app:layout_goneMarginRight="10dp"
+        app:layout_constraintRight_toLeftOf="@+id/tv_02"
+        app:layout_constraintTop_toBottomOf="@+id/btn_01"
+        android:text="按钮:右边距（右边view可见为None时有效）"
+        />
+
+    <!-- 测试：layout_goneMarginTop + layout_constraintTop_toBottomOf -->
+
+    <TextView
+        android:id="@+id/tv_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文本测试"
+        android:background="@android:color/holo_green_dark"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/btn_02"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/btn_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        app:layout_goneMarginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_03"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="按钮:上边距（上边view可见为None时有效）" />
+
+    <View
+        android:id="@+id/view_hline"
+        android:layout_width="395dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_03"
+        android:background="@android:color/darker_gray"
+        android:layout_height="60dp"></View>
+
+    <!-- 测试：layout_goneMarginBottom + layout_constraintBottom_toTopOf -->
+
+    <TextView
+        android:id="@+id/tv_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文本测试"
+        android:background="@android:color/holo_green_dark"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/view_hline"
+        app:layout_constraintLeft_toLeftOf="parent"
+         />
+
+    <Button
+        android:id="@+id/btn_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        app:layout_goneMarginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_04"
+        android:text="按钮:下边距（下边view可见为None时有效）"
+         />
+
+    <!-- 测试：layout_goneMarginStart + layout_constraintLeft_toRightOf -->
+
+    <TextView
+        android:id="@+id/tv_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文本测试"
+        android:background="@android:color/holo_green_dark"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_04"
+        />
+
+    <Button
+        android:id="@+id/btn_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        app:layout_goneMarginStart="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_05"
+        app:layout_constraintTop_toBottomOf="@id/tv_04"
+        android:text="按钮:起始边距（左边view可见为None时有效）" />
+
+    <!-- 测试：layout_goneMarginStart + layout_constraintLeft_toRightOf -->
+
+    <TextView
+        android:id="@+id/tv_06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文本测试"
+        android:background="@android:color/holo_green_dark"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_05"
+        />
+
+    <Button
+        android:id="@+id/btn_06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        app:layout_goneMarginEnd="10dp"
+        app:layout_constraintRight_toLeftOf="@+id/tv_06"
+        app:layout_constraintTop_toBottomOf="@id/btn_05"
+        android:text="按钮:终点边距（右边view可见为None时有效）" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/dimensionsCons_et_01"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="输入内容测试按钮长度宽度限制"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/dimensionsCons_btn_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="300dp"
+        android:minWidth="50dp"
+        android:text="宽度50~300dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dimensionsCons_et_01" />
+
+    <Button
+        android:id="@+id/dimensionsCons_btn_02"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="100dp"
+        android:minHeight="10dp"
+        android:text="高度10~100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dimensionsCons_btn_01" />
+
+    <Button
+        android:id="@+id/dimensionsCons_btn_03"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="按钮：宽度占屏幕70%"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dimensionsCons_btn_02"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <Button
+        android:id="@+id/dimensionsCons_btn_04"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="按钮：高度占屏幕10%"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dimensionsCons_btn_03" />
+
+    <Button
+        android:id="@+id/dimensionsCons_btn_05"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="2:1"
+        android:text="按钮：高度与宽度1:2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dimensionsCons_btn_04" />
+
+    <!-- 有点问题 -->
+    <!--<Button android:layout_width="0dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--app:layout_constraintDimensionRatio="H,16:9"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"/>-->
+
+</android.support.constraint.ConstraintLayout>
